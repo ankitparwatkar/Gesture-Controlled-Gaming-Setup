@@ -1,5 +1,7 @@
 streamlit
-opencv-python as cv2
+opencv-python
 mediapipe
 selenium
 pyautogui
+python
+cv2
