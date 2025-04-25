@@ -3,4 +3,3 @@ opencv-python
 mediapipe
 selenium
 pyautogui
-cv2
