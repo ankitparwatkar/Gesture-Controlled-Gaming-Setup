@@ -7,7 +7,7 @@ import threading
 import time
 
 # Page Config
-st.set_page_config(page_title="Gesture-Controlled Temple Run", page_icon="🎮", layout="wide")
+st.set_page_config(page_title="Gesture-Controlled Subway Surf", page_icon="🎮", layout="wide")
 
 # Custom Styles for Attractive UI
 st.markdown("""
@@ -25,7 +25,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.markdown('<div class="container"><h1>🎮 Gesture-Controlled Temple Run 2</h1></div>', unsafe_allow_html=True)
+st.markdown('<div class="container"><h1>🎮 Gesture-Controlled Subway Surf</h1></div>', unsafe_allow_html=True)
 st.write("Raise fingers to control the game character!")
 
 # Selenium Browser Setup to Launch Temple Run
@@ -34,7 +34,7 @@ def launch_game():
     options.add_argument("--disable-gpu")
     options.add_argument("--no-sandbox")
     driver = webdriver.Chrome(options=options)
-    driver.get("https://poki.com/en/g/temple-run-2")
+    driver.get("https://poki.com/en/g/subway-surfers")
     time.sleep(3)
     st.session_state["driver"] = driver
     st.success("Game launched! Click into the game before playing.")
@@ -85,5 +85,5 @@ def start_game():
     threading.Thread(target=detect_gesture, daemon=True).start()
 
 # Streamlit Interactive Buttons
-if st.button("🚀 Start Game & Gesture Control", help="Click to launch Temple Run and activate gesture tracking!", key="start_button"):
+if st.button("🚀 Start Game & Gesture Control", help="Click to launch The Game and activate gesture tracking!", key="start_button"):
     start_game()
